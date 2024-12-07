@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import Hero from './components/hero/Hero'
+import Hero from './components/sections/Hero'
+import AbouUs from './components/sections/AbouUs'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Hero />
+      <AbouUs />
     </>
   )
 }
