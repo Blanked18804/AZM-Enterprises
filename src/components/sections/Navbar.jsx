@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
+import logo from '../../assets/logo.png'
 import phone from '../../assets/phone.png'
 import mail from '../../assets/mail.png'
-import logo from '../../assets/logo.png'
+import adress from '../../assets/adress.png'
 
 function Navbar() {
   
   const info = [
     {icon: phone, text: '+92 300 6606128'},
-    {icon: mail, text: 'azmenterprises@outlook.com'}
+    {icon: mail, text: 'azmenterprises@outlook.com'},
+    {icon: adress, text: 'p6446 Muhammad Khan Town Mansoorabad Faisalabad, Pakistan'}
   ]
   const social = [
     {icon: phone},
