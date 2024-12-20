@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Amcolin from '../../assets/products/amcolin.jpg'
 import Doxitam from '../../assets/products/doxitam.jpg'
 import ViroNil from '../../assets/products/viro-nil.jpg'
@@ -8,8 +9,10 @@ import MintOil from '../../assets/products/mint-oil.jpg'
 import Flor20 from '../../assets/products/flor-20.jpg'
 import Livaton from '../../assets/products/livaton.jpg'
 import Electro from '../../assets/products/electro.jpg'
+import Navbar from './Navbar'
 
-function ProductDetail({productName}) {
+function ProductDetail() {
+
 
     const product = {
       amcolin: {
@@ -31,7 +34,7 @@ function ProductDetail({productName}) {
         dosage: '1 gm per 2 liters of drinking water for 3 to 5 days or as directed by the vet physician.',
         litertaure: ''
         },
-      vironil: {
+      viroNil: {
         image: ViroNil, 
         name: 'Viro Nil', 
         type: 'Oral Powder', 
@@ -101,41 +104,44 @@ function ProductDetail({productName}) {
         dosage: '1 gm per 2 liters of drinking water for 3 to 5 days.',
         litertaure: ''          
         },
-    }[productName]
+    }['viroNil']
 
   return (
-    <section className='px-16 flex gap-16 items-center'>
-        <div className='w-half'>
-          <img className='max-w-full object-cover rounded-3xl' src={product.image} alt={product.name} />
-        </div>
-        <div className='w-half flex flex-col gap-4'>
-          <h1 className='bold-40'>{product.name}</h1>
-          <div className='flex gap-2'>
-            <h2 className='bold-16'>Type: </h2>
-            <p className='reg-16 text-reg-text'>{product.type}</p>
+    <>
+      <Navbar />
+      <section className='px-16 flex gap-16 items-center'>
+          <div className='w-half'>
+            <img className='max-w-full object-cover rounded-3xl' src={product.image} alt={product.name} />
           </div>
-          <div className='flex gap-2'>
-            <h2 className='bold-16'>Packing: </h2>
-            <p className='reg-16 text-reg-text'>{product.packing}</p>
+          <div className='w-half flex flex-col gap-4'>
+            <h1 className='bold-40'>{product.name}</h1>
+            <div className='flex gap-2'>
+              <h2 className='bold-16'>Type: </h2>
+              <p className='reg-16 text-reg-text'>{product.type}</p>
+            </div>
+            <div className='flex gap-2'>
+              <h2 className='bold-16'>Packing: </h2>
+              <p className='reg-16 text-reg-text'>{product.packing}</p>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <h2 className='bold-16'>Composition: </h2>
+              {product.Composition.map((item, index) => {
+                return(
+                  <p key={index} className='reg-16 text-reg-text'>{item}</p>
+                )              
+              })}
+            </div>
+            <div className='flex flex-col gap-2'>
+              <h2 className='bold-16'>Description: </h2>
+              <p className='reg-16 text-reg-text'>{product.desc}</p>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <h2 className='bold-16'>Dosage: </h2>
+              <p className='reg-16 text-reg-text'>{product.dosage}</p>
+            </div>
           </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Composition: </h2>
-            {product.Composition.map((item, index) => {
-              return(
-                <p key={index} className='reg-16 text-reg-text'>{item}</p>
-              )              
-            })}
-          </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Description: </h2>
-            <p className='reg-16 text-reg-text'>{product.desc}</p>
-          </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Dosage: </h2>
-            <p className='reg-16 text-reg-text'>{product.dosage}</p>
-          </div>
-        </div>
-    </section>
+      </section>
+    </>
   )
 }
 

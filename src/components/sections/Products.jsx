@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Heading from '../reuse/Heading'
-import Button from '../reuse/Button'
 import amcolin from '../../assets/products/amcolin.jpg'
 import doxitam from '../../assets/products/doxitam.jpg'
 import viroNil from '../../assets/products/viro-nil.jpg'
@@ -43,7 +43,7 @@ function Products() {
                                 )
                             })}
                         </div>
-                        <Button label="View Product" customStyle="mt-auto"/>
+                        <a className='btn mt-auto'>View Product</a>
                     </div>
                 )
             })}

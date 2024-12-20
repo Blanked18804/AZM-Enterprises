@@ -24,20 +24,20 @@ export default {
   plugins: [
     function({addUtilities}) {
       addUtilities({
-        '.bold-40' : {
+        '.bold-40': {
           'font-weight': 'bold',
           'font-size': '40px',
           'line-height': '40px',
         },
-        '.bold-24' : {
+        '.bold-24': {
           'font-weight': 'bold',
           'font-size': '24px',
         },
-        '.bold-16' : {
+        '.bold-16': {
           'font-weight': 'bold',
           'font-size': '16px',
         },
-        '.bold-14' : {
+        '.bold-14': {
           'font-weight': 'bold',
           'font-size': '14px',
         },
@@ -46,21 +46,36 @@ export default {
           'font-size': '16px',
           'line-height': '150%',
         },
-        '.reg-14' : {
+        '.reg-14': {
           'font-weight': 'normal',
           'font-size': '14px',
           'line-height': '150%',
         },
-        '.reg-12' : {
+        '.reg-12': {
           'font-weight': 'normal',
           'font-size': '12px',
-          'reg-text': '#616161',
         },
-        '.reg-8' : {
+        '.reg-8': {
           'font-weight': 'normal',
-          'font-size': '8',
+          'font-size': '8px',
         },
-      });
+        '.btn': {
+          'padding': '12px 32px',
+          'background': '#38B1ED',
+          'border': '2px solid #38B1ED',
+          'border-radius': '12px',
+          'color': 'white',
+          'font-size': '16px',
+          'font-weight': 'bold',
+          'text-align': 'center',
+          'transition': '300ms',
+        },
+        '.btn:hover': {
+          'background': 'white',
+          'color': '#38B1ED',
+          'cursor': 'pointer',
+        }
+      },);
     },
   ],
 }

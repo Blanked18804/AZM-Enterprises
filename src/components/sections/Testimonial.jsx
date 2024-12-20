@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../reuse/Heading'
 import colon from '../../assets/testimony.png'
 
-function Testiomonial() {
+function Testimonial() {
   const testimonials = [
     {icon: colon, desc: "Using these products has been a game-changer for our poultry farm. The rate of growth of our flock has significantly increased, far exceeding our expectations.", name: "Mian Waheed"},
     {icon: colon, desc: "The products were exceptionaly accelerating the growth rate of our flock. We saw remarkable improvement in a short time. Highly recommend for boosting flock development.", name: "Muhammad Shahzad"}
@@ -26,4 +26,4 @@ function Testiomonial() {
   )
 }
 
-export default Testiomonial
+export default Testimonial
