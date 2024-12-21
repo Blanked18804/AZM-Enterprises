@@ -43,7 +43,7 @@ function Products() {
                                 )
                             })}
                         </div>
-                        <a className='btn mt-auto'>View Product</a>
+                        <Link to={`/product/${item.link}`} className='btn mt-auto'>View Product</Link>
                     </div>
                 )
             })}

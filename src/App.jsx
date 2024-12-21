@@ -1,31 +1,24 @@
-import { useState } from 'react'
-import Hero from './components/sections/Hero'
-import AbouUs from './components/sections/AbouUs'
-import Filler from './components/sections/Filler'
-import OurVision from './components/sections/OurVision'
-import ProductType from './components/sections/ProductType'
-import Testimonial from './components/sections/Testimonial'
-import Products from './components/sections/Products'
-import CeoMessage from './components/sections/CeoMessage'
-import Contact from './components/sections/Contact'
-import Footer from './components/sections/Footer'
-import ProductDetail from './components/sections/ProductDetail'
+import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './pages/Home'
+import Product from './pages/Product'
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/product/:productId',
+      element: <Product />,
+    },
+  ])
+
   return (
     <>
-      <Hero />
-      <AbouUs />
-      <Filler />
-      <OurVision />
-      <ProductType />
-      <Testimonial />
-      <Products />
-      <CeoMessage />
-      <Contact />
-      <Footer />
-      <ProductDetail />
+      <RouterProvider router={router} />
     </>
   )
 }
