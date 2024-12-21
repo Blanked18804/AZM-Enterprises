@@ -3,8 +3,9 @@ import logo from '../../assets/logo.png'
 import phone from '../../assets/phone.png'
 import mail from '../../assets/mail.png'
 import adress from '../../assets/adress.png'
+import Nav from './Nav'
 
-function Navbar() {
+function Header() {
   
   const info = [
     {icon: phone, text: '+92 300 6606128'},
@@ -15,7 +16,6 @@ function Navbar() {
     {icon: phone},
     {icon: mail}
   ]
-  const nav = ['Home', 'About Us', 'Products', 'Contact Us']
 
   return (
     <header id='header'>
@@ -46,18 +46,10 @@ function Navbar() {
           <img className='size-[60px]' src={logo} alt="logo" />
           <h1 className='bold-24'>AZM Enterprises</h1>
         </div >
-        <nav>
-          <ul className='flex gap-8'>
-            {nav.map((item, index) => {
-              return(
-                <li key={index}><a href="#" className='bold-16'>{item}</a></li>
-              )
-            })}
-          </ul>
-        </nav>
+        <Nav />
       </div>
     </header>
   )
 }
 
-export default Navbar
+export default Header

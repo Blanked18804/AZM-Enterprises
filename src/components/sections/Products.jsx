@@ -26,7 +26,7 @@ function Products() {
     ]
 
   return (
-    <section className='px-16 flex flex-col gap-16'>
+    <section id='products' className='px-16 flex flex-col gap-16'>
         <Heading topLabel="Products" botLabel="What We Provide" customStyle="items-center"/>
         <div className='grid grid-cols-3 gap-8 justify-center'>
             {products.map((item, index) => {

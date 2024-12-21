@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
+import Nav from './Nav'
 
 function Footer() {
-    const nav = ['Home', 'About Us', 'Products', 'Contact Us']
 
   return (
     <section className='px-16 pb-8'>
@@ -12,13 +12,7 @@ function Footer() {
                 <h1 className='bold-24'>AZM Enterprises</h1>
             </div >
             <div className='flex flex-col gap-8 items-center w-full'>
-                <ul className='flex gap-8'>
-                    {nav.map((item, index) => {
-                        return(
-                            <li key={index}><a href="#" className='bold-16'>{item}</a></li>
-                        )
-                    })}
-                </ul>
+                <Nav />
                 <div className='h-[2px] w-full bg-main'></div>
                 <div className='flex justify-between w-full'>
                     <p className='reg-14 text-reg-text'>Copyright©2024 by azmenterprises</p>

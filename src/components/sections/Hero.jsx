@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Header'
 import heroBg from '../../assets/hero-bg.jpg'
 
 function Hero() {
   return (
-    <section>
+    <section id='hero'>
       <Navbar />
       <div className='px-28 bg-cover bg-center text-white text-center flex flex-col gap-8 items-center justify-center' style={{height: "calc(100vh - 170px" ,backgroundImage: `url(${heroBg})`}}>
         <h1 className='bold-40'>Ensuring Health and Vitality in Every Flock</h1>

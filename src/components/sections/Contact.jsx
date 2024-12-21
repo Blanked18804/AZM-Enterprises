@@ -13,7 +13,7 @@ function Contact() {
   ]
 
   return (
-    <section className='px-16 py-32 bg-main-grad flex gap-32'>
+    <section id='contact-us' className='px-16 py-32 bg-main-grad flex gap-32'>
       <div className='w-half flex flex-col gap-8'>
         <Heading topLabel="Contact Us" botLabel="Get In Touch With Us" customStyle="text-white" h2Style="text-white"/>
         <p className='reg-16 text-white'>We're here to help! Please feel free to contact us with any questions or concerns. We'll get back to you as soon as possible.</p>
