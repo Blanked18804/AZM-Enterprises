@@ -1,13 +1,13 @@
 import React from 'react'
-import Amcolin from '../../assets/products/amcolin.jpg'
-import Doxitam from '../../assets/products/doxitam.jpg'
-import ViroNil from '../../assets/products/viro-nil.jpg'
-import RespoCare from '../../assets/products/respo-care.jpg'
-import Adek from '../../assets/products/adek.jpg'
-import MintOil from '../../assets/products/mint-oil.jpg'
-import Flor20 from '../../assets/products/flor-20.jpg'
-import Livaton from '../../assets/products/livaton.jpg'
-import Electro from '../../assets/products/electro.jpg'
+import Amcolin from '../assets/products/amcolin.jpg'
+import Doxitam from '../assets/products/doxitam.jpg'
+import ViroNil from '../assets/products/viro-nil.jpg'
+import RespoCare from '../assets/products/respo-care.jpg'
+import Adek from '../assets/products/adek.jpg'
+import MintOil from '../assets/products/mint-oil.jpg'
+import Flor20 from '../assets/products/flor-20.jpg'
+import Livaton from '../assets/products/livaton.jpg'
+import Electro from '../assets/products/electro.jpg'
 function ProductDetail({productId}) {
 
   const product = {
@@ -104,10 +104,10 @@ function ProductDetail({productId}) {
 
   return (
     <section className='px-16 flex gap-16 items-center'>
-        <div className='w-half'>
+        <div className='w-1/2'>
           <img className='max-w-full object-cover rounded-3xl' src={product.image} alt={product.name} />
         </div>
-        <div className='w-half flex flex-col gap-4'>
+        <div className='w-1/2 flex flex-col gap-4'>
           <h1 className='bold-40'>{product.name}</h1>
           <div className='flex gap-2'>
             <h2 className='bold-16'>Type: </h2>

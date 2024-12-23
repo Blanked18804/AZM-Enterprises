@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../../assets/logo.png'
 import Nav from './Nav'
+import logo from '../assets/logo.png'
 
 function Footer() {
 

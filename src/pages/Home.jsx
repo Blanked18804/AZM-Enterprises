@@ -1,20 +1,20 @@
 import React from 'react'
-import Hero from '../components/sections/Hero'
-import AbouUs from '../components/sections/AbouUs'
-import Filler from '../components/sections/Filler'
-import OurVision from '../components/sections/OurVision'
-import ProductType from '../components/sections/ProductType'
-import Testimonial from '../components/sections/Testimonial'
-import Products from '../components/sections/Products'
-import CeoMessage from '../components/sections/CeoMessage'
-import Contact from '../components/sections/Contact'
-import Footer from '../components/sections/Footer'
+import Hero from '../components/Hero'
+import AboutUs from '../components/AboutUs'
+import Filler from '../components/Filler'
+import OurVision from '../components/OurVision'
+import ProductType from '../components/ProductType'
+import Testimonial from '../components/Testimonial'
+import Products from '../components/Products'
+import CeoMessage from '../components/CeoMessage'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
     <>
       <Hero />
-      <AbouUs />
+      <AboutUs />
       <Filler />
       <OurVision />
       <ProductType />

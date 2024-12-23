@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Heading from '../reuse/Heading'
-import amcolin from '../../assets/products/amcolin.jpg'
-import doxitam from '../../assets/products/doxitam.jpg'
-import viroNil from '../../assets/products/viro-nil.jpg'
-import respoCare from '../../assets/products/respo-care.jpg'
-import adek from '../../assets/products/adek.jpg'
-import mintOil from '../../assets/products/mint-oil.jpg'
-import flor20 from '../../assets/products/flor-20.jpg'
-import livaton from '../../assets/products/livaton.jpg'
-import electro from '../../assets/products/electro.jpg'
+import Heading from './Heading'
+import amcolin from '../assets/products/amcolin.jpg'
+import doxitam from '../assets/products/doxitam.jpg'
+import viroNil from '../assets/products/viro-nil.jpg'
+import respoCare from '../assets/products/respo-care.jpg'
+import adek from '../assets/products/adek.jpg'
+import mintOil from '../assets/products/mint-oil.jpg'
+import flor20 from '../assets/products/flor-20.jpg'
+import livaton from '../assets/products/livaton.jpg'
+import electro from '../assets/products/electro.jpg'
 
 function Products() {
 
@@ -28,7 +28,7 @@ function Products() {
   return (
     <section id='products' className='px-16 flex flex-col gap-16'>
         <Heading topLabel="Products" botLabel="What We Provide" customStyle="items-center"/>
-        <div className='grid grid-cols-3 gap-8 justify-center'>
+        <div className='grid grid-cols-3 gap-8 justify-center max-md:grid-cols-1'>
             {products.map((item, index) => {
                 return(
                     <div key={index} className='p-4 border-2 border-border rounded-[32px] flex flex-col gap-4'>

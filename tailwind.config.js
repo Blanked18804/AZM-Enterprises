@@ -6,10 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      width: {
-        'half': '50%',
-        'third': '33.33%',
-      },
       colors: {
         'main': '#38B1ED',
         'bold-text': '#000A2D',

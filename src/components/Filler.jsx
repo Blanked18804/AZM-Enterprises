@@ -1,7 +1,7 @@
 import React from 'react'
-import literature from '../../assets/literature.png'
-import symposium from '../../assets/symposium.png'
-import salesRepresentative from '../../assets/sales-representative.png'
+import literature from '../assets/literature.png'
+import symposium from '../assets/symposium.png'
+import salesRepresentative from '../assets/sales-representative.png'
 
 
 function Filler() {
@@ -13,10 +13,10 @@ function Filler() {
     ]
 
   return (
-    <section className='bg-main-grad py-32 px-16 text-white flex gap-32'>
+    <section className='bg-main-grad py-32 px-16 text-white flex gap-32 max-md:flex-col max-md:items-center'>
         {fillerAssets.map((item, index) => {
             return(
-                <div key={index} className='flex flex-col gap-4 items-center text-center'>
+                <div key={index} className='w-1/3 flex flex-col gap-4 items-center text-center max-md:w-full'>
                     <img className='size-[60px]' src={item.icon} alt={literature} />
                     <h2 className='bold-24'>{item.heading}</h2>
                     <p className='reg-16'>{item.desc}</p>
