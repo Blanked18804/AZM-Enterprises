@@ -5,13 +5,13 @@ import ContactInfo from './ContactInfo'
 import SocialInfo from './SocialInfo'
 
 
-function Header({setHeaderHeight}) {
+function Header({setHeaderHeight = null}) {
 
   const headerRef = useRef(null);
 
   useEffect(() => {
     const updateHeight = () => {
-      if (headerRef.current){
+      if (headerRef.current && setHeaderHeight){
         setHeaderHeight(headerRef.current.offsetHeight);
       }
     };
