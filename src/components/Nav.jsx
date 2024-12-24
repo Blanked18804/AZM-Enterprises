@@ -49,7 +49,7 @@ function Nav({customStyle, onClick}) {
         {nav.map((item, index) => {
           return(
             <li key={index}>
-                <Link to='/' onClick={(e) => handleClick(item.section, e)} className='bold-16 relative transition-all duration-300 before:content-[""] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:scale-0 before:bg-main before:transition-all before:duration-300 hover:text-main hover:before:scale-100 max-md:bold-14' >{item.name}</Link>
+                <Link to='/' onClick={(e) => handleClick(item.section, e)} className='bold-16 relative transition-all duration-300 before:content-[""] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:scale-0 before:bg-main before:transition-all before:duration-300 hover:text-main hover:before:scale-100 max-md:bold-12' >{item.name}</Link>
             </li>
           )
         })}

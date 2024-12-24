@@ -22,7 +22,7 @@ function ProductType() {
         <div className='flex gap-8 flex-wrap max-md:flex-row max-md:flex-nowrap max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory'>
           {productAssets.map((item, index) => {
             return(
-              <div key={index} className='p-8 border-2 border-border rounded-3xl flex flex-col gap-4 max-md:min-w-[70%] max-md:items-center max-md:text-center max-md:snap-center' style={{width: 'calc(50% - 16px)'}}>
+              <div key={index} className='p-8 border-2 border-border rounded-3xl flex flex-col gap-4 max-md:px-4 max-md:min-w-[80%] max-md:items-center max-md:text-center max-md:snap-center' style={{width: 'calc(50% - 16px)'}}>
                 <img className='size-[60px]' src={item.icon} alt={item.heading} />
                 <h2 className='bold-24'>{item.heading}</h2>
                 <p className='reg-16 text-reg-text max-md:reg-14'>{item.desc}</p>

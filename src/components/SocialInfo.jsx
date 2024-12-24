@@ -1,6 +1,7 @@
 import React from 'react'
-import { RiInstagramFill } from "react-icons/ri";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri"
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6"
+import { IoLogoWhatsapp } from "react-icons/io"
 
 function SocialInfo() {
 
@@ -8,6 +9,7 @@ function SocialInfo() {
         {icon: FaFacebookF, link: 'https://facebook.com'},
         {icon: RiInstagramFill, link: 'https://instagram.com'},
         {icon: FaLinkedinIn, link: 'https://pk.linkedin.com/in/mushtaq-ahmad-979357147'},
+        {icon: IoLogoWhatsapp, link: 'https://wa.me/+923006606128?text=<message>'},
     ]
 
   return (

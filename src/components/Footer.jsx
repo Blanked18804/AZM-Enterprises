@@ -12,11 +12,11 @@ function Footer() {
             <Nav />
             <div className='h-[2px] w-full bg-main'></div>
             <div className='flex justify-between w-full'>
-                <p className='reg-14 text-reg-text max-md:reg-14'>Copyright©2024 by azmenterprises</p>
+                <p className='reg-14 text-reg-text max-md:reg-8'>Copyright©2024 by azmenterprises</p>
                 <div className='flex gap-4 items-center'>
-                    <p className='reg-14 text-reg-text max-md:reg-12'>Terms of Use</p>
+                    <p className='reg-14 text-reg-text max-md:reg-8'>Terms of Use</p>
                     <span className='w-[2px] h-4 bg-reg-text'></span>
-                    <p className='reg-14 text-reg-text max-md:reg-12'>Privacy Ploicy</p>
+                    <p className='reg-14 text-reg-text max-md:reg-8'>Privacy Ploicy</p>
                 </div>
             </div>
         </div>

@@ -40,6 +40,11 @@ export default {
           'font-size': '14px',
           'line-height': '14px'
         },
+        '.bold-12': {
+          'font-weight': 'bold',
+          'font-size': '12px',
+          'line-height': '12px'
+        },
         '.reg-16' : {
           'font-weight': 'normal',
           'font-size': '16px',

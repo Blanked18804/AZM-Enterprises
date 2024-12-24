@@ -103,37 +103,37 @@ function ProductDetail({productId}) {
   }[productId]
 
   return (
-    <section className='px-16 flex gap-16 items-center'>
-        <div className='w-1/2'>
-          <img className='max-w-full object-cover rounded-3xl' src={product.image} alt={product.name} />
+    <section className='px-16 flex gap-16 items-center max-md:px-8 max-md:flex-col'>
+      <div className='w-1/2 max-md:w-full'>
+        <img className='max-w-full object-cover rounded-3xl' src={product.image} alt={product.name} />
+      </div>
+      <div className='w-1/2 flex flex-col gap-4 max-md:w-full'>
+        <h1 className='bold-40 max-md:bold-24'>{product.name}</h1>
+        <div className='flex gap-2'>
+          <h2 className='bold-16 max-md:bold-14'>Type: </h2>
+          <p className='reg-16 text-reg-text max-md:reg-14'>{product.type}</p>
         </div>
-        <div className='w-1/2 flex flex-col gap-4'>
-          <h1 className='bold-40'>{product.name}</h1>
-          <div className='flex gap-2'>
-            <h2 className='bold-16'>Type: </h2>
-            <p className='reg-16 text-reg-text'>{product.type}</p>
-          </div>
-          <div className='flex gap-2'>
-            <h2 className='bold-16'>Packing: </h2>
-            <p className='reg-16 text-reg-text'>{product.packing}</p>
-          </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Composition: </h2>
-            {product.Composition.map((item, index) => {
-              return(
-                <p key={index} className='reg-16 text-reg-text'>{item}</p>
-              )              
-            })}
-          </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Description: </h2>
-            <p className='reg-16 text-reg-text'>{product.desc}</p>
-          </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className='bold-16'>Dosage: </h2>
-            <p className='reg-16 text-reg-text'>{product.dosage}</p>
-          </div>
+        <div className='flex gap-2'>
+          <h2 className='bold-16 max-md:bold-14'>Packing: </h2>
+          <p className='reg-16 text-reg-text max-md:reg-14'>{product.packing}</p>
         </div>
+        <div className='flex flex-col gap-2'>
+          <h2 className='bold-16 max-md:bold-14'>Composition: </h2>
+          {product.Composition.map((item, index) => {
+            return(
+              <p key={index} className='reg-16 text-reg-text max-md:reg-14'>{item}</p>
+            )              
+          })}
+        </div>
+        <div className='flex flex-col gap-2'>
+          <h2 className='bold-16 max-md:bold-14'>Description: </h2>
+          <p className='reg-16 text-reg-text max-md:reg-14'>{product.desc}</p>
+        </div>
+        <div className='flex flex-col gap-2'>
+          <h2 className='bold-16 max-md:bold-14'>Dosage: </h2>
+          <p className='reg-16 text-reg-text max-md:reg-14'>{product.dosage}</p>
+        </div>
+      </div>
     </section>
   )
 }

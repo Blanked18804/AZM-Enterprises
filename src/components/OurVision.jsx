@@ -21,7 +21,7 @@ function OurVision() {
         <div className='flex gap-8 max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory'>
           {visionAsset.map((item, index) => {
             return(
-              <div key={index} className='w-1/3 p-8 border-2 border-border rounded-3xl flex flex-col gap-4 items-center text-center max-md:min-w-[70%] max-md:snap-center'>
+              <div key={index} className='w-1/3 p-8 border-2 border-border rounded-3xl flex flex-col gap-4 items-center text-center max-md:min-w-[80%] max-md:px-4 max-md:snap-center'>
                 <img className='size-[60px]' src={item.icon} alt={item.heading} />
                 <h2 className='bold-24 max-md:bold-16'>{item.heading}</h2>
                 <p className='reg-16 text-reg-text max-md:reg-14'>{item.desc}</p>
