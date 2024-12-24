@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import logo from '../assets/logo.png'
 import Nav from './Nav'
-import ContactInfo from './ContactInfo'
-import SocialInfo from './SocialInfo'
-
+import Hamburger from './Hamburger'
+import ContactInfo from './ContactInfo';
+import SocialInfo from './SocialInfo';
+import Logo from './Logo';
 
 function Header({setHeaderHeight = null}) {
 
@@ -24,18 +24,33 @@ function Header({setHeaderHeight = null}) {
     }
   }, [setHeaderHeight]);
   
+  function showSideBar(){
+    const sideBar = document.querySelector("#sideBar");
+    sideBar.classList.add("right-0");
+    sideBar.classList.remove("right-[-60vw]");
+    document.body.style.overflowY = "hidden";
+  }
+  function hideSideBar(){
+    const sideBar = document.querySelector("#sideBar");
+    sideBar.classList.add("right-[-60vw]");
+    sideBar.classList.remove("right-0");
+    document.body.style.overflowY = "unset";
+  }
+
   return (
-    <header id='header' ref={headerRef} >
+    <header id='header' ref={headerRef} className='w-full'>
       <div className='bg-main-grad px-16 py-5 flex justify-between items-center max-md:hidden'>
         <ContactInfo addressHidden={true} />
         <SocialInfo />
       </div >
-      <div className='px-16 py-5 bg-white sticky top-0 flex justify-between items-center'>
-        <div className='flex gap-2 items-center'>
-          <img className='size-[60px]' src={logo} alt="logo" />
-          <h1 className='bold-24'>AZM Enterprises</h1>
-        </div >
-        <Nav />
+      <div className='w-full px-16 py-5 bg-white sticky top-0 flex justify-between items-center max-md:px-8'>
+        <Logo />
+        <Nav customStyle='max-md:hidden' />
+        <Hamburger onClick={showSideBar} active={false}/>
+        <div id='sideBar' className='bg-white pt-8 w-1/2  h-screen fixed top-0 right-[-60vw] shadow-[rgba(0,_0,_0,_0.1)_-10px_0px_10px] flex-col gap-8 items-center transition-all duration-700 ease-in hidden max-md:flex'>
+          <Hamburger onClick={hideSideBar} active={true} />
+          <Nav onClick={hideSideBar} customStyle='flex-col items-center' />
+        </div>
       </div>
     </header>
   )

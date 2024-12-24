@@ -5,7 +5,7 @@ function Form({customStyle}) {
   const inputStyle = "border-none rounded-xl p-2 focus:outline-none resize-none"
 
   return (
-    <form action="https://api.web3forms.com/submit" method="POST" className={`flex flex-col gap-8 ${customStyle}`} id='form'>
+    <form action="https://api.web3forms.com/submit" method="POST" className={`flex flex-col gap-8 w-full ${customStyle}`} id='form'>
         <input type="hidden" name="access_key" value="5cf5a57e-debc-4b9f-ab7a-8190f23d922a" />
         <input className={inputStyle} type="text" placeholder="Full Name"  required/>
         <input className={inputStyle} type="email" placeholder="E-mail"  required/>

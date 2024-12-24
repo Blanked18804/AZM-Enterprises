@@ -13,7 +13,7 @@ function Filler() {
     ]
 
   return (
-    <section className='bg-main-grad py-32 px-16 text-white flex gap-32 max-md:flex-col max-md:items-center'>
+    <section className='bg-main-grad py-32 px-16 text-white flex gap-32 max-md:px-8 max-md:flex-col max-md:items-center'>
         {fillerAssets.map((item, index) => {
             return(
                 <div key={index} className='w-1/3 flex flex-col gap-4 items-center text-center max-md:w-full'>

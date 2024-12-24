@@ -26,14 +26,14 @@ function Products() {
     ]
 
   return (
-    <section id='products' className='px-16 flex flex-col gap-16'>
+    <section id='products' className='px-16 flex flex-col gap-16 max-md:px-8'>
         <Heading topLabel="Products" botLabel="What We Provide" customStyle="items-center"/>
         <div className='grid grid-cols-3 gap-8 justify-center max-md:grid-cols-1'>
             {products.map((item, index) => {
                 return(
                     <div key={index} className='p-4 border-2 border-border rounded-[32px] flex flex-col gap-4'>
                         <img className='max-w-full object-cover rounded-2xl' src={item.image} alt={item.name} />
-                        <h2 className='bold-24'>{item.name}</h2>
+                        <h2 className='bold-24 max-md:bold-16'>{item.name}</h2>
                         <div className='flex gap-2 items-center text-center flex-wrap'>
                             {item.comp.map((item, index) => {
                                 return(
@@ -43,7 +43,7 @@ function Products() {
                                 )
                             })}
                         </div>
-                        <Link to={`/product/${item.link}`} className='btn mt-auto'>View Product</Link>
+                        <Link to={`/product/${item.link}`} className='btn mt-auto max-md:bold-16'>View Product</Link>
 
                     </div>
                 )

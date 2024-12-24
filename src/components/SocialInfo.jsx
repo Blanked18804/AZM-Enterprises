@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaFacebook, FaInstagram  } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 

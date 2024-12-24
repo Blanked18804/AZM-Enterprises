@@ -28,14 +28,17 @@ export default {
         '.bold-24': {
           'font-weight': 'bold',
           'font-size': '24px',
+          'line-height': '24px'
         },
         '.bold-16': {
           'font-weight': 'bold',
           'font-size': '16px',
+          'line-height': '16px'
         },
         '.bold-14': {
           'font-weight': 'bold',
           'font-size': '14px',
+          'line-height': '14px'
         },
         '.reg-16' : {
           'font-weight': 'normal',
