@@ -19,20 +19,20 @@ import electro from '../assets/products/electro.jpg'
 function Products() {
 
     const products = [
-        {image: virosil, name: 'Virosil', comp: ['Salicylic Acid', 'Vitamin E', 'Lysozyme'], link: 'virosil'},
-        {image: gsyLiverGuard, name: 'GSY Liver Guard', comp: ['Sorbitol', 'L-lysine', 'Magnesium Sulphate'], link: 'gsyLiverGuard'},
-        {image: stressCoolC, name: 'Stress Cool C', comp: ['Sodium Chloride', 'Calcium Lactate', 'Calcium Gluconate'], link: 'stressCoolC'},
-        {image: vinaCalphos, name: 'Vina Calphos', comp: ['Calcium', 'Phosphorus', 'Vitamin B12'], link: 'vinaCalphos'},
-        {image: gsyVitaminC, name: 'GSY Vitamin C', comp: ['Vitamic C', 'Sorbitol'], link: 'gsyVitaminC'},
-        {image: amcolin, name: 'Amcolin', comp: ['Amoxicillin Trihydrate', 'Colistin Sulphate', 'Clavulanic Acid'], link: 'amcolin'},
-        {image: doxitam, name: 'Doxitam', comp: ['Tylosin Tartrate', 'Doxycyline Hyclate', 'Colistin Sulphate'], link: 'doxitam'},
-        {image: viroNil, name: 'AZM Viro Nil', comp: ['Amonium Chloride', 'Methionine', 'Sorbitol'], link: 'viroNil'},
-        {image: respoCare, name: 'AZM Respo Care', comp: ['Menthol', 'Eucalyptus Extract',  'Peppermint Oil'], link: 'respoCare'},
+        {image: virosil, name: 'Virosil', comp: ['Salicylic Acid', 'Vitamin E', 'Lysozyme'], link: 'virosil', isImported: true},
+        {image: gsyLiverGuard, name: 'GSY Liver Guard', comp: ['Sorbitol', 'L-lysine', 'Magnesium Sulphate'], link: 'gsyLiverGuard', isImported: true},
+        {image: stressCoolC, name: 'Stress Cool C', comp: ['Sodium Chloride', 'Calcium Lactate', 'Calcium Gluconate'], link: 'stressCoolC', isImported: true},
+        {image: vinaCalphos, name: 'Vina Calphos', comp: ['Calcium', 'Phosphorus', 'Vitamin B12'], link: 'vinaCalphos', isImported: true},
+        {image: gsyVitaminC, name: 'GSY Vitamin C', comp: ['Vitamic C', 'Sorbitol'], link: 'gsyVitaminC', isImported: true},
+        {image: amcolin, name: 'Amcolin', comp: ['Amoxicillin Trihydrate', 'Colistin Sulphate', 'Clavulanic Acid'], link: 'amcolin', isImported: false},
+        {image: doxitam, name: 'Doxitam', comp: ['Tylosin Tartrate', 'Doxycyline Hyclate', 'Colistin Sulphate'], link: 'doxitam', isImported: false},
+        {image: viroNil, name: 'AZM Viro Nil', comp: ['Amonium Chloride', 'Methionine', 'Sorbitol'], link: 'viroNil', isImported: false},
+        {image: respoCare, name: 'AZM Respo Care', comp: ['Menthol', 'Eucalyptus Extract',  'Peppermint Oil'], link: 'respoCare', isImported: false},
         {image: adek, name: 'Adek', comp: ['Vitamin A', 'Vitamin D3', 'Vitamin E'], link: 'adek'},
-        {image: mintOil, name: 'AZM Mint Oil', comp: ['Menthol', 'Eucalyptus Oil', 'Camphor'], link: 'mintOil'},
-        {image: flor20, name: 'Flor-20', comp: ['Florfenicol'], link: 'flor20'},
-        {image: livaton, name: 'Livaton', comp: ['Sorbitol', 'Carnitine', 'Choline Chloride'], link: 'livaton'},
-        {image: electro, name: 'AZM Electro', comp: ['Vitamin C', 'Sodium', 'Potassium'], link: 'electro'},
+        {image: mintOil, name: 'AZM Mint Oil', comp: ['Menthol', 'Eucalyptus Oil', 'Camphor'], link: 'mintOil', isImported: false},
+        {image: flor20, name: 'Flor-20', comp: ['Florfenicol'], link: 'flor20', isImported: false},
+        {image: livaton, name: 'Livaton', comp: ['Sorbitol', 'Carnitine', 'Choline Chloride'], link: 'livaton', isImported: false},
+        {image: electro, name: 'AZM Electro', comp: ['Vitamin C', 'Sodium', 'Potassium'], link: 'electro', isImported: false},
     ]
 
   return (
@@ -41,7 +41,8 @@ function Products() {
         <div className='grid grid-cols-3 gap-8 justify-center max-md:grid-cols-1'>
             {products.map((item, index) => {
                 return(
-                    <div key={index} className='p-4 border-2 border-border rounded-[32px] flex flex-col gap-4'>
+                    <div key={index} className='relative p-4 border-2 border-border rounded-[32px] flex flex-col gap-4'>
+                        <h2 className={`absolute left-6 top-6 p-2 rounded-lg bg-main text-white bold-12 ${item.isImported ? '' : 'hidden'}`}>Imported</h2>
                         <img className='max-w-full object-cover rounded-2xl' src={item.image} alt={item.name} />
                         <h2 className='bold-24 max-md:bold-16'>{item.name}</h2>
                         <div className='flex gap-2 items-center text-center flex-wrap'>

@@ -9,6 +9,7 @@ import Products from '../components/Products'
 import CeoMessage from '../components/CeoMessage'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import ScrollToTop from '../components/ScrollToTop'
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <CeoMessage />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </>
   )
 }

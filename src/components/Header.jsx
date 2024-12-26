@@ -47,7 +47,7 @@ function Header({setHeaderHeight = null}) {
         <Logo />
         <Nav customStyle='max-md:hidden' />
         <Hamburger onClick={showSideBar} active={false}/>
-        <div id='sideBar' className='bg-white pt-8 w-1/2  h-screen fixed top-0 right-[-60vw] shadow-[rgba(0,_0,_0,_0.1)_-10px_0px_10px] flex-col gap-8 items-center transition-all duration-700 ease-in hidden max-md:flex'>
+        <div id='sideBar' className='bg-white pt-8 w-1/2  h-screen fixed top-0 right-[-60vw] shadow-[rgba(0,_0,_0,_0.1)_-10px_0px_10px] flex-col gap-8 items-center transition-all duration-[600ms] ease-in hidden max-md:flex'>
           <Hamburger onClick={hideSideBar} active={true} />
           <Nav onClick={hideSideBar} customStyle='flex-col items-center' />
         </div>

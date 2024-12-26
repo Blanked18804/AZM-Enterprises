@@ -158,7 +158,7 @@ function ProductDetail({productId}) {
   }[productId]
 
   return (
-    <section className="px-16 flex gap-16 items-center max-md:px-8 max-md:flex-col">
+    <section className="px-16 -mt-16 flex gap-16 items-center max-md:px-8 max-md:flex-col">
       <div className="w-1/2 max-md:w-full">
         <img className="max-w-full object-cover rounded-3xl" src={product.image} alt={product.name} />
       </div>
